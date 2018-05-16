@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK_DataComparerLib", "TK_DataComparerLib\TK_DataComparerLib.csproj", "{93731AAF-AA4B-4DFB-AA1A-875946BA21D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK_DataComparerUI", "TK_DataComparerUI\TK_DataComparerUI.csproj", "{560A2DD5-D6D5-4EB6-991A-25B2ECCB9A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesComparer", "FilesComparer\FilesComparer.csproj", "{7C9619D5-9AAE-480B-BBDE-54F00B62A9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparerTester", "ComparerTester\ComparerTester.csproj", "{EB59C71B-757F-4C64-8433-A1260FC357D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93731AAF-AA4B-4DFB-AA1A-875946BA21D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93731AAF-AA4B-4DFB-AA1A-875946BA21D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93731AAF-AA4B-4DFB-AA1A-875946BA21D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93731AAF-AA4B-4DFB-AA1A-875946BA21D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{560A2DD5-D6D5-4EB6-991A-25B2ECCB9A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560A2DD5-D6D5-4EB6-991A-25B2ECCB9A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560A2DD5-D6D5-4EB6-991A-25B2ECCB9A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560A2DD5-D6D5-4EB6-991A-25B2ECCB9A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C9619D5-9AAE-480B-BBDE-54F00B62A9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C9619D5-9AAE-480B-BBDE-54F00B62A9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C9619D5-9AAE-480B-BBDE-54F00B62A9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C9619D5-9AAE-480B-BBDE-54F00B62A9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB59C71B-757F-4C64-8433-A1260FC357D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB59C71B-757F-4C64-8433-A1260FC357D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB59C71B-757F-4C64-8433-A1260FC357D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB59C71B-757F-4C64-8433-A1260FC357D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+J:\Dev\VS\TK_DataComparer\TK_DataComparerLib\bin\Debug\TK_DataComparerLib.dll
+J:\Dev\VS\TK_DataComparer\TK_DataComparerLib\bin\Debug\TK_DataComparerLib.pdb
+J:\Dev\VS\TK_DataComparer\TK_DataComparerLib\obj\Debug\ResolveAssemblyReference.cache
+J:\Dev\VS\TK_DataComparer\TK_DataComparerLib\obj\Debug\TK_DataComparerLib.dll
+J:\Dev\VS\TK_DataComparer\TK_DataComparerLib\obj\Debug\TK_DataComparerLib.pdb
+Z:\ToonKit\RnD\Src\TK_DataComparer\TK_DataComparerLib\bin\Debug\TK_DataComparerLib.dll
+Z:\ToonKit\RnD\Src\TK_DataComparer\TK_DataComparerLib\bin\Debug\TK_DataComparerLib.pdb
+Z:\ToonKit\RnD\Src\TK_DataComparer\TK_DataComparerLib\obj\Debug\ResolveAssemblyReference.cache
+Z:\ToonKit\RnD\Src\TK_DataComparer\TK_DataComparerLib\obj\Debug\TK_DataComparerLib.dll
+Z:\ToonKit\RnD\Src\TK_DataComparer\TK_DataComparerLib\obj\Debug\TK_DataComparerLib.pdb

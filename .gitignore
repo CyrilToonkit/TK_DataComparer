@@ -1,0 +1,7 @@
+*.cache
+*.config
+*.dll
+*.exe
+*.pdb
+*.suo
+*.manifest
