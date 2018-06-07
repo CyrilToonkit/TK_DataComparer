@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FilesComparer;
 
 namespace TK_DataComparerUI
 {
@@ -14,12 +13,12 @@ namespace TK_DataComparerUI
         public Form1()
         {
             InitializeComponent();
-
+            /*
             ComparableFolder leftFolder = new ComparableFolder("C:\\tmp");
 
             ComparableFolder rightFolder = new ComparableFolder("C:\\tmp - Copie");
 
-            dataComparerUCtrl1.InitCompare(leftFolder, rightFolder);
+            dataComparerUCtrl1.InitCompare(leftFolder, rightFolder);*/
         }
     }
 }
