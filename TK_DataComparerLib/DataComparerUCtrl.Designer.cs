@@ -31,7 +31,7 @@ namespace TK_DataComparerLib
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataComparerUCtrl));
-            MiniLogger.LogPreferences logPreferences2 = new MiniLogger.LogPreferences();
+            MiniLogger.LogPreferences logPreferences1 = new MiniLogger.LogPreferences();
             this.ComparisonsDGV = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -47,17 +47,6 @@ namespace TK_DataComparerLib
             this.loadMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pickRightBT = new System.Windows.Forms.Button();
-            this.rightSummaryLabel = new System.Windows.Forms.Label();
-            this.leftTB = new System.Windows.Forms.TextBox();
-            this.pickLeftBT = new System.Windows.Forms.Button();
-            this.rightTB = new System.Windows.Forms.TextBox();
-            this.leftSummaryLabel = new System.Windows.Forms.Label();
-            this.collapsibleGroup1 = new TK.GraphComponents.CollapsibleGroup();
-            this.colorsLV = new System.Windows.Forms.ListView();
-            this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
-            this.pickBothBT = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.comparisonCtxt = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.associateWithToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,23 +61,35 @@ namespace TK_DataComparerLib
             this.highlightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.refreshPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.collapsibleGroup3 = new TK.GraphComponents.CollapsibleGroup();
-            this.logUCtrl1 = new MiniLogger.LogUCtrl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.refreshCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.collapsibleGroup1 = new TK.GraphComponents.CollapsibleGroup();
+            this.colorsLV = new System.Windows.Forms.ListView();
+            this.collapsibleGroup3 = new TK.GraphComponents.CollapsibleGroup();
+            this.logUCtrl1 = new MiniLogger.LogUCtrl();
             this.collapsibleGroup4 = new TK.GraphComponents.CollapsibleGroup();
             this.propertiesLV = new System.Windows.Forms.ListView();
             this.fastCompareBT = new System.Windows.Forms.CheckBox();
+            this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pickRightBT = new System.Windows.Forms.Button();
+            this.rightSummaryLabel = new System.Windows.Forms.Label();
+            this.leftTB = new System.Windows.Forms.TextBox();
+            this.pickLeftBT = new System.Windows.Forms.Button();
+            this.rightTB = new System.Windows.Forms.TextBox();
+            this.leftSummaryLabel = new System.Windows.Forms.Label();
+            this.pickBothBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ComparisonsDGV)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.collapsibleGroup1.SuspendLayout();
-            this.collapsibleGroup2.SuspendLayout();
             this.comparisonCtxt.SuspendLayout();
-            this.collapsibleGroup3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.collapsibleGroup1.SuspendLayout();
+            this.collapsibleGroup3.SuspendLayout();
             this.collapsibleGroup4.SuspendLayout();
+            this.collapsibleGroup2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ComparisonsDGV
@@ -102,7 +103,7 @@ namespace TK_DataComparerLib
             this.ComparisonsDGV.Location = new System.Drawing.Point(3, 16);
             this.ComparisonsDGV.Name = "ComparisonsDGV";
             this.ComparisonsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 202);
+            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 194);
             this.ComparisonsDGV.TabIndex = 0;
             this.ComparisonsDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ComparisonsDGV_MouseUp);
             // 
@@ -111,7 +112,7 @@ namespace TK_DataComparerLib
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 218);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 210);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(529, 22);
             this.statusStrip1.SizingGrip = false;
@@ -121,7 +122,7 @@ namespace TK_DataComparerLib
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(451, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(420, 17);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "n items / N items total (i Differ)";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,7 +141,8 @@ namespace TK_DataComparerLib
             this.saveMappingToolStripMenuItem,
             this.loadMappingToolStripMenuItem,
             this.toolStripMenuItem5,
-            this.refreshToolStripMenuItem});
+            this.refreshToolStripMenuItem,
+            this.refreshCompareToolStripMenuItem});
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -218,147 +220,6 @@ namespace TK_DataComparerLib
             this.refreshToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshBT_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.pickRightBT, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rightSummaryLabel, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.leftTB, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pickLeftBT, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rightTB, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.leftSummaryLabel, 0, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 39);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 73);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // pickRightBT
-            // 
-            this.pickRightBT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pickRightBT.Location = new System.Drawing.Point(265, 1);
-            this.pickRightBT.Margin = new System.Windows.Forms.Padding(1);
-            this.pickRightBT.Name = "pickRightBT";
-            this.pickRightBT.Size = new System.Drawing.Size(263, 26);
-            this.pickRightBT.TabIndex = 5;
-            this.pickRightBT.Text = "Pick Right";
-            this.pickRightBT.UseVisualStyleBackColor = true;
-            this.pickRightBT.Click += new System.EventHandler(this.pickRightBT_Click);
-            // 
-            // rightSummaryLabel
-            // 
-            this.rightSummaryLabel.AutoSize = true;
-            this.rightSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 56);
-            this.rightSummaryLabel.Name = "rightSummaryLabel";
-            this.rightSummaryLabel.Size = new System.Drawing.Size(259, 17);
-            this.rightSummaryLabel.TabIndex = 9;
-            this.rightSummaryLabel.Text = "0 items";
-            // 
-            // leftTB
-            // 
-            this.leftTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftTB.Location = new System.Drawing.Point(3, 31);
-            this.leftTB.Name = "leftTB";
-            this.leftTB.ReadOnly = true;
-            this.leftTB.Size = new System.Drawing.Size(258, 20);
-            this.leftTB.TabIndex = 7;
-            this.leftTB.Text = "NOTHING LOADED";
-            // 
-            // pickLeftBT
-            // 
-            this.pickLeftBT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pickLeftBT.Location = new System.Drawing.Point(1, 1);
-            this.pickLeftBT.Margin = new System.Windows.Forms.Padding(1);
-            this.pickLeftBT.Name = "pickLeftBT";
-            this.pickLeftBT.Size = new System.Drawing.Size(262, 26);
-            this.pickLeftBT.TabIndex = 4;
-            this.pickLeftBT.Text = "Pick Left";
-            this.pickLeftBT.UseVisualStyleBackColor = true;
-            this.pickLeftBT.Click += new System.EventHandler(this.pickLeftBT_Click);
-            // 
-            // rightTB
-            // 
-            this.rightTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightTB.Location = new System.Drawing.Point(267, 31);
-            this.rightTB.Name = "rightTB";
-            this.rightTB.ReadOnly = true;
-            this.rightTB.Size = new System.Drawing.Size(259, 20);
-            this.rightTB.TabIndex = 6;
-            this.rightTB.Text = "NOTHING LOADED";
-            // 
-            // leftSummaryLabel
-            // 
-            this.leftSummaryLabel.AutoSize = true;
-            this.leftSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 56);
-            this.leftSummaryLabel.Name = "leftSummaryLabel";
-            this.leftSummaryLabel.Size = new System.Drawing.Size(258, 17);
-            this.leftSummaryLabel.TabIndex = 8;
-            this.leftSummaryLabel.Text = "0 items";
-            // 
-            // collapsibleGroup1
-            // 
-            this.collapsibleGroup1.AllowResize = false;
-            this.collapsibleGroup1.Collapsed = true;
-            this.collapsibleGroup1.CollapseOnClick = true;
-            this.collapsibleGroup1.Controls.Add(this.colorsLV);
-            this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 436);
-            this.collapsibleGroup1.Name = "collapsibleGroup1";
-            this.collapsibleGroup1.OpenedBaseHeight = 65;
-            this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(535, 31);
-            this.collapsibleGroup1.TabIndex = 5;
-            this.collapsibleGroup1.TabStop = false;
-            this.collapsibleGroup1.Text = "Colors";
-            // 
-            // colorsLV
-            // 
-            this.colorsLV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colorsLV.Location = new System.Drawing.Point(3, 16);
-            this.colorsLV.Name = "colorsLV";
-            this.colorsLV.Size = new System.Drawing.Size(529, 12);
-            this.colorsLV.TabIndex = 1;
-            this.colorsLV.UseCompatibleStateImageBehavior = false;
-            // 
-            // collapsibleGroup2
-            // 
-            this.collapsibleGroup2.AllowResize = false;
-            this.collapsibleGroup2.Collapsed = false;
-            this.collapsibleGroup2.CollapseOnClick = true;
-            this.collapsibleGroup2.Controls.Add(this.tableLayoutPanel1);
-            this.collapsibleGroup2.Controls.Add(this.pickBothBT);
-            this.collapsibleGroup2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.collapsibleGroup2.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup2.Location = new System.Drawing.Point(0, 0);
-            this.collapsibleGroup2.Name = "collapsibleGroup2";
-            this.collapsibleGroup2.OpenedBaseHeight = 150;
-            this.collapsibleGroup2.OpenedBaseWidth = 200;
-            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 115);
-            this.collapsibleGroup2.TabIndex = 6;
-            this.collapsibleGroup2.TabStop = false;
-            this.collapsibleGroup2.Text = "Pick Objects";
-            // 
-            // pickBothBT
-            // 
-            this.pickBothBT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pickBothBT.Location = new System.Drawing.Point(3, 16);
-            this.pickBothBT.Name = "pickBothBT";
-            this.pickBothBT.Size = new System.Drawing.Size(529, 23);
-            this.pickBothBT.TabIndex = 1;
-            this.pickBothBT.Text = "PICK BOTH";
-            this.pickBothBT.UseVisualStyleBackColor = true;
-            this.pickBothBT.Click += new System.EventHandler(this.pickBothBT_Click);
             // 
             // comparisonCtxt
             // 
@@ -452,45 +313,14 @@ namespace TK_DataComparerLib
             this.refreshPropertiesToolStripMenuItem.Text = "Refresh properties";
             this.refreshPropertiesToolStripMenuItem.Click += new System.EventHandler(this.refreshPropertiesToolStripMenuItem_Click);
             // 
-            // collapsibleGroup3
-            // 
-            this.collapsibleGroup3.AllowResize = true;
-            this.collapsibleGroup3.Collapsed = true;
-            this.collapsibleGroup3.CollapseOnClick = true;
-            this.collapsibleGroup3.Controls.Add(this.logUCtrl1);
-            this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup3.Location = new System.Drawing.Point(0, 467);
-            this.collapsibleGroup3.Name = "collapsibleGroup3";
-            this.collapsibleGroup3.OpenedBaseHeight = 59;
-            this.collapsibleGroup3.OpenedBaseWidth = 200;
-            this.collapsibleGroup3.Size = new System.Drawing.Size(535, 23);
-            this.collapsibleGroup3.TabIndex = 7;
-            this.collapsibleGroup3.TabStop = false;
-            this.collapsibleGroup3.Text = "Log";
-            // 
-            // logUCtrl1
-            // 
-            this.logUCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logUCtrl1.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logUCtrl1.Location = new System.Drawing.Point(3, 16);
-            logPreferences2.ShowErrors = true;
-            logPreferences2.ShowInfos = true;
-            logPreferences2.ShowLogs = true;
-            logPreferences2.ShowWarnings = true;
-            this.logUCtrl1.LoggingPreferences = logPreferences2;
-            this.logUCtrl1.Name = "logUCtrl1";
-            this.logUCtrl1.Size = new System.Drawing.Size(529, 4);
-            this.logUCtrl1.TabIndex = 1;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ComparisonsDGV);
             this.groupBox2.Controls.Add(this.statusStrip1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 193);
+            this.groupBox2.Location = new System.Drawing.Point(0, 197);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(535, 243);
+            this.groupBox2.Size = new System.Drawing.Size(535, 235);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Compared entities";
@@ -503,6 +333,70 @@ namespace TK_DataComparerLib
             // 
             this.openFileDialog1.Filter = "Xml (*.xml)|*.xml";
             // 
+            // refreshCompareToolStripMenuItem
+            // 
+            this.refreshCompareToolStripMenuItem.Name = "refreshCompareToolStripMenuItem";
+            this.refreshCompareToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.refreshCompareToolStripMenuItem.Text = "RefreshCompare";
+            this.refreshCompareToolStripMenuItem.Click += new System.EventHandler(this.refreshCompareToolStripMenuItem_Click);
+            // 
+            // collapsibleGroup1
+            // 
+            this.collapsibleGroup1.AllowResize = false;
+            this.collapsibleGroup1.Collapsed = true;
+            this.collapsibleGroup1.CollapseOnClick = true;
+            this.collapsibleGroup1.Controls.Add(this.colorsLV);
+            this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
+            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 432);
+            this.collapsibleGroup1.Name = "collapsibleGroup1";
+            this.collapsibleGroup1.OpenedBaseHeight = 65;
+            this.collapsibleGroup1.OpenedBaseWidth = 200;
+            this.collapsibleGroup1.Size = new System.Drawing.Size(535, 33);
+            this.collapsibleGroup1.TabIndex = 5;
+            this.collapsibleGroup1.TabStop = false;
+            this.collapsibleGroup1.Text = "Colors";
+            // 
+            // colorsLV
+            // 
+            this.colorsLV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colorsLV.Location = new System.Drawing.Point(3, 16);
+            this.colorsLV.Name = "colorsLV";
+            this.colorsLV.Size = new System.Drawing.Size(529, 14);
+            this.colorsLV.TabIndex = 1;
+            this.colorsLV.UseCompatibleStateImageBehavior = false;
+            // 
+            // collapsibleGroup3
+            // 
+            this.collapsibleGroup3.AllowResize = true;
+            this.collapsibleGroup3.Collapsed = true;
+            this.collapsibleGroup3.CollapseOnClick = true;
+            this.collapsibleGroup3.Controls.Add(this.logUCtrl1);
+            this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
+            this.collapsibleGroup3.Location = new System.Drawing.Point(0, 465);
+            this.collapsibleGroup3.Name = "collapsibleGroup3";
+            this.collapsibleGroup3.OpenedBaseHeight = 59;
+            this.collapsibleGroup3.OpenedBaseWidth = 200;
+            this.collapsibleGroup3.Size = new System.Drawing.Size(535, 25);
+            this.collapsibleGroup3.TabIndex = 7;
+            this.collapsibleGroup3.TabStop = false;
+            this.collapsibleGroup3.Text = "Log";
+            // 
+            // logUCtrl1
+            // 
+            this.logUCtrl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logUCtrl1.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logUCtrl1.Location = new System.Drawing.Point(3, 16);
+            logPreferences1.ShowErrors = true;
+            logPreferences1.ShowInfos = true;
+            logPreferences1.ShowLogs = true;
+            logPreferences1.ShowWarnings = true;
+            this.logUCtrl1.LoggingPreferences = logPreferences1;
+            this.logUCtrl1.Name = "logUCtrl1";
+            this.logUCtrl1.Size = new System.Drawing.Size(529, 6);
+            this.logUCtrl1.TabIndex = 1;
+            // 
             // collapsibleGroup4
             // 
             this.collapsibleGroup4.AllowResize = true;
@@ -512,11 +406,11 @@ namespace TK_DataComparerLib
             this.collapsibleGroup4.Controls.Add(this.fastCompareBT);
             this.collapsibleGroup4.Dock = System.Windows.Forms.DockStyle.Top;
             this.collapsibleGroup4.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 115);
+            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 117);
             this.collapsibleGroup4.Name = "collapsibleGroup4";
             this.collapsibleGroup4.OpenedBaseHeight = 150;
             this.collapsibleGroup4.OpenedBaseWidth = 200;
-            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 78);
+            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 80);
             this.collapsibleGroup4.TabIndex = 9;
             this.collapsibleGroup4.TabStop = false;
             this.collapsibleGroup4.Text = "Properties";
@@ -527,7 +421,7 @@ namespace TK_DataComparerLib
             this.propertiesLV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertiesLV.Location = new System.Drawing.Point(3, 16);
             this.propertiesLV.Name = "propertiesLV";
-            this.propertiesLV.Size = new System.Drawing.Size(529, 42);
+            this.propertiesLV.Size = new System.Drawing.Size(529, 44);
             this.propertiesLV.TabIndex = 1;
             this.propertiesLV.UseCompatibleStateImageBehavior = false;
             this.propertiesLV.View = System.Windows.Forms.View.List;
@@ -540,13 +434,128 @@ namespace TK_DataComparerLib
             this.fastCompareBT.CheckState = System.Windows.Forms.CheckState.Checked;
             this.fastCompareBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.fastCompareBT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.fastCompareBT.Location = new System.Drawing.Point(3, 58);
+            this.fastCompareBT.Location = new System.Drawing.Point(3, 60);
             this.fastCompareBT.Name = "fastCompareBT";
             this.fastCompareBT.Size = new System.Drawing.Size(529, 17);
             this.fastCompareBT.TabIndex = 2;
             this.fastCompareBT.Text = "Fast compare";
             this.fastCompareBT.UseVisualStyleBackColor = true;
             this.fastCompareBT.CheckedChanged += new System.EventHandler(this.fastCompareBT_CheckedChanged);
+            // 
+            // collapsibleGroup2
+            // 
+            this.collapsibleGroup2.AllowResize = false;
+            this.collapsibleGroup2.Collapsed = false;
+            this.collapsibleGroup2.CollapseOnClick = true;
+            this.collapsibleGroup2.Controls.Add(this.tableLayoutPanel1);
+            this.collapsibleGroup2.Controls.Add(this.pickBothBT);
+            this.collapsibleGroup2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.collapsibleGroup2.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
+            this.collapsibleGroup2.Location = new System.Drawing.Point(0, 0);
+            this.collapsibleGroup2.Name = "collapsibleGroup2";
+            this.collapsibleGroup2.OpenedBaseHeight = 150;
+            this.collapsibleGroup2.OpenedBaseWidth = 200;
+            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 117);
+            this.collapsibleGroup2.TabIndex = 6;
+            this.collapsibleGroup2.TabStop = false;
+            this.collapsibleGroup2.Text = "Pick Objects";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.pickRightBT, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rightSummaryLabel, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.leftTB, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pickLeftBT, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rightTB, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.leftSummaryLabel, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 39);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 75);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // pickRightBT
+            // 
+            this.pickRightBT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pickRightBT.Location = new System.Drawing.Point(265, 1);
+            this.pickRightBT.Margin = new System.Windows.Forms.Padding(1);
+            this.pickRightBT.Name = "pickRightBT";
+            this.pickRightBT.Size = new System.Drawing.Size(263, 27);
+            this.pickRightBT.TabIndex = 5;
+            this.pickRightBT.Text = "Pick Right";
+            this.pickRightBT.UseVisualStyleBackColor = true;
+            this.pickRightBT.Click += new System.EventHandler(this.pickRightBT_Click);
+            // 
+            // rightSummaryLabel
+            // 
+            this.rightSummaryLabel.AutoSize = true;
+            this.rightSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 58);
+            this.rightSummaryLabel.Name = "rightSummaryLabel";
+            this.rightSummaryLabel.Size = new System.Drawing.Size(259, 17);
+            this.rightSummaryLabel.TabIndex = 9;
+            this.rightSummaryLabel.Text = "0 items";
+            // 
+            // leftTB
+            // 
+            this.leftTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftTB.Location = new System.Drawing.Point(3, 32);
+            this.leftTB.Name = "leftTB";
+            this.leftTB.ReadOnly = true;
+            this.leftTB.Size = new System.Drawing.Size(258, 20);
+            this.leftTB.TabIndex = 7;
+            this.leftTB.Text = "NOTHING LOADED";
+            // 
+            // pickLeftBT
+            // 
+            this.pickLeftBT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pickLeftBT.Location = new System.Drawing.Point(1, 1);
+            this.pickLeftBT.Margin = new System.Windows.Forms.Padding(1);
+            this.pickLeftBT.Name = "pickLeftBT";
+            this.pickLeftBT.Size = new System.Drawing.Size(262, 27);
+            this.pickLeftBT.TabIndex = 4;
+            this.pickLeftBT.Text = "Pick Left";
+            this.pickLeftBT.UseVisualStyleBackColor = true;
+            this.pickLeftBT.Click += new System.EventHandler(this.pickLeftBT_Click);
+            // 
+            // rightTB
+            // 
+            this.rightTB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightTB.Location = new System.Drawing.Point(267, 32);
+            this.rightTB.Name = "rightTB";
+            this.rightTB.ReadOnly = true;
+            this.rightTB.Size = new System.Drawing.Size(259, 20);
+            this.rightTB.TabIndex = 6;
+            this.rightTB.Text = "NOTHING LOADED";
+            // 
+            // leftSummaryLabel
+            // 
+            this.leftSummaryLabel.AutoSize = true;
+            this.leftSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 58);
+            this.leftSummaryLabel.Name = "leftSummaryLabel";
+            this.leftSummaryLabel.Size = new System.Drawing.Size(258, 17);
+            this.leftSummaryLabel.TabIndex = 8;
+            this.leftSummaryLabel.Text = "0 items";
+            // 
+            // pickBothBT
+            // 
+            this.pickBothBT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pickBothBT.Location = new System.Drawing.Point(3, 16);
+            this.pickBothBT.Name = "pickBothBT";
+            this.pickBothBT.Size = new System.Drawing.Size(529, 23);
+            this.pickBothBT.TabIndex = 1;
+            this.pickBothBT.Text = "PICK BOTH";
+            this.pickBothBT.UseVisualStyleBackColor = true;
+            this.pickBothBT.Click += new System.EventHandler(this.pickBothBT_Click);
             // 
             // DataComparerUCtrl
             // 
@@ -563,16 +572,16 @@ namespace TK_DataComparerLib
             ((System.ComponentModel.ISupportInitialize)(this.ComparisonsDGV)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.collapsibleGroup1.ResumeLayout(false);
-            this.collapsibleGroup2.ResumeLayout(false);
             this.comparisonCtxt.ResumeLayout(false);
-            this.collapsibleGroup3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.collapsibleGroup1.ResumeLayout(false);
+            this.collapsibleGroup3.ResumeLayout(false);
             this.collapsibleGroup4.ResumeLayout(false);
             this.collapsibleGroup4.PerformLayout();
+            this.collapsibleGroup2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -627,5 +636,6 @@ namespace TK_DataComparerLib
         private ToolStripMenuItem refreshPropertiesToolStripMenuItem;
         private Button pickBothBT;
         private CheckBox fastCompareBT;
+        private ToolStripMenuItem refreshCompareToolStripMenuItem;
     }
 }

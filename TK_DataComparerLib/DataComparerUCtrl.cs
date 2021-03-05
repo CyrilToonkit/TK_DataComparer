@@ -860,5 +860,10 @@ namespace TK_DataComparerLib
             _comp.FastCompare = fastCompareBT.Checked;
         }
 
+        private void refreshCompareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _comp.Compare();
+            _comp.AssociateEntities();
+        }
     }
 }
