@@ -13,6 +13,19 @@ namespace TK_DataComparerLib
             set { _name = value; }
         }
 
+        protected int decimals = 3;
+        public int Decimals
+        {
+            get
+            {
+                return decimals;
+            }
+            set
+            {
+                decimals = value;
+            }
+        }
+
         protected List<DataEntity> _entities = new List<DataEntity>();
 
         public List<DataEntity> Entities

@@ -28,7 +28,6 @@ namespace TK_DataComparerLib
         Dictionary<DataEntity, Dictionary<DataEntity, Dictionary<string, double>>> _comparisons = new Dictionary<DataEntity, Dictionary<DataEntity, Dictionary<string, double>>>();
 
         bool fastCompare = true;
-
         public bool FastCompare
         {
             get
@@ -38,6 +37,19 @@ namespace TK_DataComparerLib
             set
             {
                 fastCompare = value;
+            }
+        }
+
+        int decimals = 3;
+        public int Decimals
+        {
+            get
+            {
+                return decimals;
+            }
+            set
+            {
+                decimals = value;
             }
         }
 

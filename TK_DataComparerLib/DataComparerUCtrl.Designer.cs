@@ -47,6 +47,7 @@ namespace TK_DataComparerLib
             this.loadMappingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.comparisonCtxt = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.associateWithToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,13 +65,15 @@ namespace TK_DataComparerLib
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.refreshCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapsibleGroup1 = new TK.GraphComponents.CollapsibleGroup();
             this.colorsLV = new System.Windows.Forms.ListView();
             this.collapsibleGroup3 = new TK.GraphComponents.CollapsibleGroup();
             this.logUCtrl1 = new MiniLogger.LogUCtrl();
             this.collapsibleGroup4 = new TK.GraphComponents.CollapsibleGroup();
             this.propertiesLV = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.precisionNUD = new System.Windows.Forms.NumericUpDown();
             this.fastCompareBT = new System.Windows.Forms.CheckBox();
             this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -88,6 +91,8 @@ namespace TK_DataComparerLib
             this.collapsibleGroup1.SuspendLayout();
             this.collapsibleGroup3.SuspendLayout();
             this.collapsibleGroup4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precisionNUD)).BeginInit();
             this.collapsibleGroup2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +108,7 @@ namespace TK_DataComparerLib
             this.ComparisonsDGV.Location = new System.Drawing.Point(3, 16);
             this.ComparisonsDGV.Name = "ComparisonsDGV";
             this.ComparisonsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 194);
+            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 188);
             this.ComparisonsDGV.TabIndex = 0;
             this.ComparisonsDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ComparisonsDGV_MouseUp);
             // 
@@ -112,7 +117,7 @@ namespace TK_DataComparerLib
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 210);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 204);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(529, 22);
             this.statusStrip1.SizingGrip = false;
@@ -122,7 +127,7 @@ namespace TK_DataComparerLib
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(420, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(451, 17);
             this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "n items / N items total (i Differ)";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,6 +226,13 @@ namespace TK_DataComparerLib
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshBT_Click);
             // 
+            // refreshCompareToolStripMenuItem
+            // 
+            this.refreshCompareToolStripMenuItem.Name = "refreshCompareToolStripMenuItem";
+            this.refreshCompareToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.refreshCompareToolStripMenuItem.Text = "RefreshCompare";
+            this.refreshCompareToolStripMenuItem.Click += new System.EventHandler(this.refreshCompareToolStripMenuItem_Click);
+            // 
             // comparisonCtxt
             // 
             this.comparisonCtxt.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -318,9 +330,9 @@ namespace TK_DataComparerLib
             this.groupBox2.Controls.Add(this.ComparisonsDGV);
             this.groupBox2.Controls.Add(this.statusStrip1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 197);
+            this.groupBox2.Location = new System.Drawing.Point(0, 201);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(535, 235);
+            this.groupBox2.Size = new System.Drawing.Size(535, 229);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Compared entities";
@@ -333,13 +345,6 @@ namespace TK_DataComparerLib
             // 
             this.openFileDialog1.Filter = "Xml (*.xml)|*.xml";
             // 
-            // refreshCompareToolStripMenuItem
-            // 
-            this.refreshCompareToolStripMenuItem.Name = "refreshCompareToolStripMenuItem";
-            this.refreshCompareToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.refreshCompareToolStripMenuItem.Text = "RefreshCompare";
-            this.refreshCompareToolStripMenuItem.Click += new System.EventHandler(this.refreshCompareToolStripMenuItem_Click);
-            // 
             // collapsibleGroup1
             // 
             this.collapsibleGroup1.AllowResize = false;
@@ -348,11 +353,11 @@ namespace TK_DataComparerLib
             this.collapsibleGroup1.Controls.Add(this.colorsLV);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 432);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 430);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 65;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(535, 33);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(535, 34);
             this.collapsibleGroup1.TabIndex = 5;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "Colors";
@@ -362,7 +367,7 @@ namespace TK_DataComparerLib
             this.colorsLV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.colorsLV.Location = new System.Drawing.Point(3, 16);
             this.colorsLV.Name = "colorsLV";
-            this.colorsLV.Size = new System.Drawing.Size(529, 14);
+            this.colorsLV.Size = new System.Drawing.Size(529, 15);
             this.colorsLV.TabIndex = 1;
             this.colorsLV.UseCompatibleStateImageBehavior = false;
             // 
@@ -374,11 +379,11 @@ namespace TK_DataComparerLib
             this.collapsibleGroup3.Controls.Add(this.logUCtrl1);
             this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup3.Location = new System.Drawing.Point(0, 465);
+            this.collapsibleGroup3.Location = new System.Drawing.Point(0, 464);
             this.collapsibleGroup3.Name = "collapsibleGroup3";
             this.collapsibleGroup3.OpenedBaseHeight = 59;
             this.collapsibleGroup3.OpenedBaseWidth = 200;
-            this.collapsibleGroup3.Size = new System.Drawing.Size(535, 25);
+            this.collapsibleGroup3.Size = new System.Drawing.Size(535, 26);
             this.collapsibleGroup3.TabIndex = 7;
             this.collapsibleGroup3.TabStop = false;
             this.collapsibleGroup3.Text = "Log";
@@ -394,7 +399,7 @@ namespace TK_DataComparerLib
             logPreferences1.ShowWarnings = true;
             this.logUCtrl1.LoggingPreferences = logPreferences1;
             this.logUCtrl1.Name = "logUCtrl1";
-            this.logUCtrl1.Size = new System.Drawing.Size(529, 6);
+            this.logUCtrl1.Size = new System.Drawing.Size(529, 7);
             this.logUCtrl1.TabIndex = 1;
             // 
             // collapsibleGroup4
@@ -403,14 +408,14 @@ namespace TK_DataComparerLib
             this.collapsibleGroup4.Collapsed = false;
             this.collapsibleGroup4.CollapseOnClick = true;
             this.collapsibleGroup4.Controls.Add(this.propertiesLV);
-            this.collapsibleGroup4.Controls.Add(this.fastCompareBT);
+            this.collapsibleGroup4.Controls.Add(this.panel1);
             this.collapsibleGroup4.Dock = System.Windows.Forms.DockStyle.Top;
             this.collapsibleGroup4.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 117);
+            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 119);
             this.collapsibleGroup4.Name = "collapsibleGroup4";
             this.collapsibleGroup4.OpenedBaseHeight = 150;
             this.collapsibleGroup4.OpenedBaseWidth = 200;
-            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 80);
+            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 82);
             this.collapsibleGroup4.TabIndex = 9;
             this.collapsibleGroup4.TabStop = false;
             this.collapsibleGroup4.Text = "Properties";
@@ -421,22 +426,62 @@ namespace TK_DataComparerLib
             this.propertiesLV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertiesLV.Location = new System.Drawing.Point(3, 16);
             this.propertiesLV.Name = "propertiesLV";
-            this.propertiesLV.Size = new System.Drawing.Size(529, 44);
+            this.propertiesLV.Size = new System.Drawing.Size(529, 42);
             this.propertiesLV.TabIndex = 1;
             this.propertiesLV.UseCompatibleStateImageBehavior = false;
             this.propertiesLV.View = System.Windows.Forms.View.List;
             this.propertiesLV.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.propertiesLV_ItemChecked);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.precisionNUD);
+            this.panel1.Controls.Add(this.fastCompareBT);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(529, 21);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(141, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Decimals";
+            // 
+            // precisionNUD
+            // 
+            this.precisionNUD.Dock = System.Windows.Forms.DockStyle.Left;
+            this.precisionNUD.Location = new System.Drawing.Point(90, 0);
+            this.precisionNUD.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.precisionNUD.Name = "precisionNUD";
+            this.precisionNUD.Size = new System.Drawing.Size(45, 20);
+            this.precisionNUD.TabIndex = 3;
+            this.precisionNUD.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.precisionNUD.ValueChanged += new System.EventHandler(this.precisionNUD_ValueChanged);
             // 
             // fastCompareBT
             // 
             this.fastCompareBT.AutoSize = true;
             this.fastCompareBT.Checked = true;
             this.fastCompareBT.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.fastCompareBT.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.fastCompareBT.Dock = System.Windows.Forms.DockStyle.Left;
             this.fastCompareBT.ForeColor = System.Drawing.Color.Gainsboro;
-            this.fastCompareBT.Location = new System.Drawing.Point(3, 60);
+            this.fastCompareBT.Location = new System.Drawing.Point(0, 0);
             this.fastCompareBT.Name = "fastCompareBT";
-            this.fastCompareBT.Size = new System.Drawing.Size(529, 17);
+            this.fastCompareBT.Size = new System.Drawing.Size(90, 21);
             this.fastCompareBT.TabIndex = 2;
             this.fastCompareBT.Text = "Fast compare";
             this.fastCompareBT.UseVisualStyleBackColor = true;
@@ -455,7 +500,7 @@ namespace TK_DataComparerLib
             this.collapsibleGroup2.Name = "collapsibleGroup2";
             this.collapsibleGroup2.OpenedBaseHeight = 150;
             this.collapsibleGroup2.OpenedBaseWidth = 200;
-            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 117);
+            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 119);
             this.collapsibleGroup2.TabIndex = 6;
             this.collapsibleGroup2.TabStop = false;
             this.collapsibleGroup2.Text = "Pick Objects";
@@ -479,7 +524,7 @@ namespace TK_DataComparerLib
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 77);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pickRightBT
@@ -488,7 +533,7 @@ namespace TK_DataComparerLib
             this.pickRightBT.Location = new System.Drawing.Point(265, 1);
             this.pickRightBT.Margin = new System.Windows.Forms.Padding(1);
             this.pickRightBT.Name = "pickRightBT";
-            this.pickRightBT.Size = new System.Drawing.Size(263, 27);
+            this.pickRightBT.Size = new System.Drawing.Size(263, 28);
             this.pickRightBT.TabIndex = 5;
             this.pickRightBT.Text = "Pick Right";
             this.pickRightBT.UseVisualStyleBackColor = true;
@@ -498,7 +543,7 @@ namespace TK_DataComparerLib
             // 
             this.rightSummaryLabel.AutoSize = true;
             this.rightSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 58);
+            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 60);
             this.rightSummaryLabel.Name = "rightSummaryLabel";
             this.rightSummaryLabel.Size = new System.Drawing.Size(259, 17);
             this.rightSummaryLabel.TabIndex = 9;
@@ -507,7 +552,7 @@ namespace TK_DataComparerLib
             // leftTB
             // 
             this.leftTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftTB.Location = new System.Drawing.Point(3, 32);
+            this.leftTB.Location = new System.Drawing.Point(3, 33);
             this.leftTB.Name = "leftTB";
             this.leftTB.ReadOnly = true;
             this.leftTB.Size = new System.Drawing.Size(258, 20);
@@ -520,7 +565,7 @@ namespace TK_DataComparerLib
             this.pickLeftBT.Location = new System.Drawing.Point(1, 1);
             this.pickLeftBT.Margin = new System.Windows.Forms.Padding(1);
             this.pickLeftBT.Name = "pickLeftBT";
-            this.pickLeftBT.Size = new System.Drawing.Size(262, 27);
+            this.pickLeftBT.Size = new System.Drawing.Size(262, 28);
             this.pickLeftBT.TabIndex = 4;
             this.pickLeftBT.Text = "Pick Left";
             this.pickLeftBT.UseVisualStyleBackColor = true;
@@ -529,7 +574,7 @@ namespace TK_DataComparerLib
             // rightTB
             // 
             this.rightTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightTB.Location = new System.Drawing.Point(267, 32);
+            this.rightTB.Location = new System.Drawing.Point(267, 33);
             this.rightTB.Name = "rightTB";
             this.rightTB.ReadOnly = true;
             this.rightTB.Size = new System.Drawing.Size(259, 20);
@@ -540,7 +585,7 @@ namespace TK_DataComparerLib
             // 
             this.leftSummaryLabel.AutoSize = true;
             this.leftSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 58);
+            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 60);
             this.leftSummaryLabel.Name = "leftSummaryLabel";
             this.leftSummaryLabel.Size = new System.Drawing.Size(258, 17);
             this.leftSummaryLabel.TabIndex = 8;
@@ -578,7 +623,9 @@ namespace TK_DataComparerLib
             this.collapsibleGroup1.ResumeLayout(false);
             this.collapsibleGroup3.ResumeLayout(false);
             this.collapsibleGroup4.ResumeLayout(false);
-            this.collapsibleGroup4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.precisionNUD)).EndInit();
             this.collapsibleGroup2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -637,5 +684,8 @@ namespace TK_DataComparerLib
         private Button pickBothBT;
         private CheckBox fastCompareBT;
         private ToolStripMenuItem refreshCompareToolStripMenuItem;
+        private Panel panel1;
+        private NumericUpDown precisionNUD;
+        private Label label1;
     }
 }

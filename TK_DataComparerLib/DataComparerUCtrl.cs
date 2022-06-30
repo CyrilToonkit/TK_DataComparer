@@ -94,6 +94,9 @@ namespace TK_DataComparerLib
 
         public void Compare()
         {
+            _left.Decimals = _comp.Decimals;
+            _right.Decimals = _comp.Decimals;
+
             _left.CollectEntities();
             _right.CollectEntities();
 
@@ -864,6 +867,11 @@ namespace TK_DataComparerLib
         {
             _comp.Compare();
             _comp.AssociateEntities();
+        }
+
+        private void precisionNUD_ValueChanged(object sender, EventArgs e)
+        {
+            _comp.Decimals = Decimal.ToInt32(precisionNUD.Value);
         }
     }
 }

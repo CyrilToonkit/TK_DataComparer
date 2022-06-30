@@ -13,6 +13,19 @@ namespace TK_DataComparerLib
 
         private DataEntity _associatedEntity = null;
 
+        protected int decimals = 3;
+        public int Decimals
+        {
+            get
+            {
+                return decimals;
+            }
+            set
+            {
+                decimals = value;
+            }
+        }
+
         private bool _dontAssociate = false;
         public bool DontAssociate
         {
