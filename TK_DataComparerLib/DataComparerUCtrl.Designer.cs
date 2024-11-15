@@ -108,7 +108,7 @@ namespace TK_DataComparerLib
             this.ComparisonsDGV.Location = new System.Drawing.Point(3, 16);
             this.ComparisonsDGV.Name = "ComparisonsDGV";
             this.ComparisonsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 188);
+            this.ComparisonsDGV.Size = new System.Drawing.Size(529, 184);
             this.ComparisonsDGV.TabIndex = 0;
             this.ComparisonsDGV.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ComparisonsDGV_MouseUp);
             // 
@@ -117,7 +117,7 @@ namespace TK_DataComparerLib
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripSplitButton1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 204);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 200);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(529, 22);
             this.statusStrip1.SizingGrip = false;
@@ -330,9 +330,9 @@ namespace TK_DataComparerLib
             this.groupBox2.Controls.Add(this.ComparisonsDGV);
             this.groupBox2.Controls.Add(this.statusStrip1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 201);
+            this.groupBox2.Location = new System.Drawing.Point(0, 205);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(535, 229);
+            this.groupBox2.Size = new System.Drawing.Size(535, 225);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Compared entities";
@@ -411,11 +411,11 @@ namespace TK_DataComparerLib
             this.collapsibleGroup4.Controls.Add(this.panel1);
             this.collapsibleGroup4.Dock = System.Windows.Forms.DockStyle.Top;
             this.collapsibleGroup4.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 119);
+            this.collapsibleGroup4.Location = new System.Drawing.Point(0, 121);
             this.collapsibleGroup4.Name = "collapsibleGroup4";
             this.collapsibleGroup4.OpenedBaseHeight = 150;
             this.collapsibleGroup4.OpenedBaseWidth = 200;
-            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 82);
+            this.collapsibleGroup4.Size = new System.Drawing.Size(535, 84);
             this.collapsibleGroup4.TabIndex = 9;
             this.collapsibleGroup4.TabStop = false;
             this.collapsibleGroup4.Text = "Properties";
@@ -426,7 +426,7 @@ namespace TK_DataComparerLib
             this.propertiesLV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propertiesLV.Location = new System.Drawing.Point(3, 16);
             this.propertiesLV.Name = "propertiesLV";
-            this.propertiesLV.Size = new System.Drawing.Size(529, 42);
+            this.propertiesLV.Size = new System.Drawing.Size(529, 44);
             this.propertiesLV.TabIndex = 1;
             this.propertiesLV.UseCompatibleStateImageBehavior = false;
             this.propertiesLV.View = System.Windows.Forms.View.List;
@@ -438,7 +438,7 @@ namespace TK_DataComparerLib
             this.panel1.Controls.Add(this.precisionNUD);
             this.panel1.Controls.Add(this.fastCompareBT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 58);
+            this.panel1.Location = new System.Drawing.Point(3, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(529, 21);
             this.panel1.TabIndex = 3;
@@ -500,7 +500,7 @@ namespace TK_DataComparerLib
             this.collapsibleGroup2.Name = "collapsibleGroup2";
             this.collapsibleGroup2.OpenedBaseHeight = 150;
             this.collapsibleGroup2.OpenedBaseWidth = 200;
-            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 119);
+            this.collapsibleGroup2.Size = new System.Drawing.Size(535, 121);
             this.collapsibleGroup2.TabIndex = 6;
             this.collapsibleGroup2.TabStop = false;
             this.collapsibleGroup2.Text = "Pick Objects";
@@ -524,7 +524,7 @@ namespace TK_DataComparerLib
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 77);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 79);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pickRightBT
@@ -533,7 +533,7 @@ namespace TK_DataComparerLib
             this.pickRightBT.Location = new System.Drawing.Point(265, 1);
             this.pickRightBT.Margin = new System.Windows.Forms.Padding(1);
             this.pickRightBT.Name = "pickRightBT";
-            this.pickRightBT.Size = new System.Drawing.Size(263, 28);
+            this.pickRightBT.Size = new System.Drawing.Size(263, 29);
             this.pickRightBT.TabIndex = 5;
             this.pickRightBT.Text = "Pick Right";
             this.pickRightBT.UseVisualStyleBackColor = true;
@@ -543,7 +543,7 @@ namespace TK_DataComparerLib
             // 
             this.rightSummaryLabel.AutoSize = true;
             this.rightSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 60);
+            this.rightSummaryLabel.Location = new System.Drawing.Point(267, 62);
             this.rightSummaryLabel.Name = "rightSummaryLabel";
             this.rightSummaryLabel.Size = new System.Drawing.Size(259, 17);
             this.rightSummaryLabel.TabIndex = 9;
@@ -552,7 +552,7 @@ namespace TK_DataComparerLib
             // leftTB
             // 
             this.leftTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftTB.Location = new System.Drawing.Point(3, 33);
+            this.leftTB.Location = new System.Drawing.Point(3, 34);
             this.leftTB.Name = "leftTB";
             this.leftTB.ReadOnly = true;
             this.leftTB.Size = new System.Drawing.Size(258, 20);
@@ -565,7 +565,7 @@ namespace TK_DataComparerLib
             this.pickLeftBT.Location = new System.Drawing.Point(1, 1);
             this.pickLeftBT.Margin = new System.Windows.Forms.Padding(1);
             this.pickLeftBT.Name = "pickLeftBT";
-            this.pickLeftBT.Size = new System.Drawing.Size(262, 28);
+            this.pickLeftBT.Size = new System.Drawing.Size(262, 29);
             this.pickLeftBT.TabIndex = 4;
             this.pickLeftBT.Text = "Pick Left";
             this.pickLeftBT.UseVisualStyleBackColor = true;
@@ -574,7 +574,7 @@ namespace TK_DataComparerLib
             // rightTB
             // 
             this.rightTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightTB.Location = new System.Drawing.Point(267, 33);
+            this.rightTB.Location = new System.Drawing.Point(267, 34);
             this.rightTB.Name = "rightTB";
             this.rightTB.ReadOnly = true;
             this.rightTB.Size = new System.Drawing.Size(259, 20);
@@ -585,7 +585,7 @@ namespace TK_DataComparerLib
             // 
             this.leftSummaryLabel.AutoSize = true;
             this.leftSummaryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 60);
+            this.leftSummaryLabel.Location = new System.Drawing.Point(3, 62);
             this.leftSummaryLabel.Name = "leftSummaryLabel";
             this.leftSummaryLabel.Size = new System.Drawing.Size(258, 17);
             this.leftSummaryLabel.TabIndex = 8;
